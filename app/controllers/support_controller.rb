@@ -16,6 +16,10 @@ class SupportController < ApplicationController
   def show
   end
 
+  def about_us
+    @title  = _("About Us")
+  end
+
   def about
     @vmdb = {:version => Vmdb::Appliance.VERSION, :build => Vmdb::Appliance.BUILD}
     @user_role = User.current_user.miq_user_role_name

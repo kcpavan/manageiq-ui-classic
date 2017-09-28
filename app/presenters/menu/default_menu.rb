@@ -283,11 +283,17 @@ module Menu
         ], :help)
       end
 
+      def my_menu_section
+        Menu::Section.new(:about_us, N_("About Us"), 'pficon pficon-user', [
+          Menu::Item.new('about',  N_('About'),  'about',  {:feature => 'about'}, '/support/about_us?support_tab=about')
+        ])
+      end
+
       def default_menu
         [cloud_inteligence_menu_section, services_menu_section, compute_menu_section, configuration_menu_section,
          network_menu_section, middleware_menu_section, datawarehouse_menu_section, storage_menu_section,
          control_menu_section, automation_menu_section, optimize_menu_section, monitor_menu_section,
-         settings_menu_section, help_menu_section].compact
+         settings_menu_section, help_menu_section, my_menu_section].compact
       end
     end
   end

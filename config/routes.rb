@@ -3008,7 +3008,7 @@ Rails.application.routes.draw do
     },
 
     :support                  => {
-      :get  => %w(index)
+      :get  => %w(index about_us)
     },
 
     :vm                       => {
